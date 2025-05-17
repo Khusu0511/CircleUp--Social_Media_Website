@@ -4,30 +4,24 @@ import "./register.scss";
 import axios from "axios";
 
 const Register = () => {
-  // State to hold user inputs
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
     password: "",
     name: "",
   });
-
-  // State to hold any error messages
   const [err, setErr] = useState(null);
 
-  // Function to update state when user types
   const handleChange = (e) => {
     setInputs((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  // Function to handle form submission
   const handleClick = async (e) => {
-    e.preventDefault(); // Prevent page from refreshing
+    e.preventDefault();
+
     try {
-      // Make API request to the backend registration endpoint
       await axios.post("http://localhost:8800/api/auth/register", inputs);
     } catch (err) {
-      // Set the error state if the request fails
       setErr(err.response.data);
     }
   };
@@ -36,9 +30,11 @@ const Register = () => {
     <div className="register">
       <div className="card">
         <div className="left">
-          <h1>Circle Up.</h1>
+          <h1>Lama Social.</h1>
           <p>
-            Join our community to connect, share, and discover. It's free and always will be.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
+            alias totam numquam ipsa exercitationem dignissimos, error nam,
+            consequatur.
           </p>
           <span>Do you have an account?</span>
           <Link to="/login">
@@ -72,7 +68,7 @@ const Register = () => {
               name="name"
               onChange={handleChange}
             />
-            {err && <div className="error">{err}</div>}
+            {err && err}
             <button onClick={handleClick}>Register</button>
           </form>
         </div>
@@ -82,3 +78,4 @@ const Register = () => {
 };
 
 export default Register;
+

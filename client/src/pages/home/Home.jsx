@@ -1,6 +1,6 @@
-import Posts from "../../components/posts/Posts"
-import Share from "../../components/share/Share" // Corrected this line
-import "./home.scss"
+import Posts from "../../components/posts/Posts";
+import Share from "../../components/share/Share";
+import "./home.scss";
 
 const Home = () => {
   return (
@@ -8,7 +8,8 @@ const Home = () => {
       <Share/>
       <Posts/>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
+

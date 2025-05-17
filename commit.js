@@ -23,7 +23,7 @@ async function run() {
     console.log(`Last commit was on: ${lastCommitDate}`);
 
     // 2. Calculate the new date by adding 1 day
-    const newCommitDate = moment(lastCommitDate).add(1, 'days');
+    const newCommitDate = moment(lastCommitDate).add(26, 'days');
     const newGitDate = newCommitDate.toISOString();
     console.log(`New commit will be dated: ${newCommitDate.format("YYYY-MM-DD HH:mm:ss")}`);
 

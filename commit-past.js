@@ -8,7 +8,7 @@ console.log("🚀 Script starting...");
 
 // --- CONFIGURATION ---
 // Set how many days in the past you want the commit to be.
-const DAYS_AGO = 133; 
+const DAYS_AGO = 132; 
 // ---------------------
 
 const commitDate = moment().subtract(DAYS_AGO, "days").format("YYYY-MM-DD HH:mm:ss");
